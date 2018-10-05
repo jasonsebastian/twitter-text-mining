@@ -23,9 +23,7 @@ Enter these credentials into `CREDENTIALS.json` in the format of
 
 ## Build
 
-Once the prerequisites are satisfied, 
-
-Listen to Twitter Streaming API and pipe the output.
+Once the prerequisites are satisfied, listen to Twitter Streaming API and pipe the output.
 
 ```
 python twitter_streaming.py > data/twitter_data.txt
