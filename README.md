@@ -14,16 +14,25 @@ Enter these credentials into `CREDENTIALS.json` in the format of
 
 ```
 {
-    "ACCESS_TOKEN": "YOUR_ACCESS_TOKEN",
-    "ACCESS_TOKEN_SECRET": "YOUR_ACCESS_TOKEN_SECRET",
-    "CONSUMER_KEY": "YOUR_CONSUMER_KEY",
-    "CONSUMER_SECRET": "YOUR_CONSUMER_SECRET"
+    "access_token": "YOUR_ACCESS_TOKEN",
+    "access_token_secret": "YOUR_ACCESS_TOKEN_SECRET",
+    "consumer_key": "YOUR_CONSUMER_KEY",
+    "consumer_key": "YOUR_CONSUMER_SECRET"
 }
 ```
 
 ## Build
 
-Once the prerequisites are satisfied, you can run the program by executing the following:
+Once the prerequisites are satisfied, 
+
+Listen to Twitter Streaming API and pipe the output.
+
+```
+python twitter_streaming.py > data/twitter_data.txt
+```
+
+Extract relevant links by executing the following:
+
 ```
 python extract.py
 ```

@@ -3,15 +3,6 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 
-with open("CREDENTIALS.json") as c:
-    creds = json.load(c)
-
-# Credentials to access Twitter API
-ACCESS_TOKEN = creds["ACCESS_TOKEN"]
-ACCESS_TOKEN_SECRET = creds["ACCESS_TOKEN_SECRET"]
-CONSUMER_KEY = creds["CONSUMER_KEY"]
-CONSUMER_SECRET = creds["CONSUMER_SECRET"]
-
 
 # Basic listener that just prints received tweets to stdout.
 class StdOutListener(StreamListener):
@@ -25,6 +16,15 @@ class StdOutListener(StreamListener):
 
 
 if __name__ == '__main__':
+
+    with open("CREDENTIALS.json") as c:
+        creds = json.load(c)
+
+    # Credentials to access Twitter API
+    ACCESS_TOKEN = creds["access_token"]
+    ACCESS_TOKEN_SECRET = creds["access_token_secret"]
+    CONSUMER_KEY = creds["consumer_key"]
+    CONSUMER_SECRET = creds["consumer_secret"]
 
     # Handle Twitter authentification and connection to Twitter Streaming API
     l = StdOutListener()
